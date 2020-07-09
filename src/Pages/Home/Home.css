@@ -1,0 +1,32 @@
+@import "../style.css";
+
+.button__create-room {
+    background: rgb(247,202,108);
+    background: linear-gradient(360deg, rgba(247,202,108,1) 0%, rgba(251,170,127,1) 100%);
+    box-shadow: 0 2px 0 rgba(249, 184, 118, 0.30);
+}
+
+.button__create-room::after {
+    background-image: url("https://mafia.mtdl.ru/icons/gamepad.svg");
+    filter: invert(100%);
+}
+
+.button__connect-room {
+    background: rgb(245,114,210);
+    background: linear-gradient(360deg, rgba(245,114,210,1) 0%, rgba(202,114,241,1) 100%);
+    box-shadow: 0 2px 0 rgba(223, 114, 225, 0.30);
+}
+
+.button__connect-room::after {
+    background-image: url("https://mafia.mtdl.ru/icons/servers.svg");
+    filter: invert(100%);
+}
+
+.name__title {
+    margin-block-end: 1em;
+    max-width: 300px;
+}
+
+.center_subheader__title {
+    max-width: 300px;
+}

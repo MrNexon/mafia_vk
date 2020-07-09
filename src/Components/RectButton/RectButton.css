@@ -1,0 +1,20 @@
+.rect__button {
+    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid #4893ff;
+    color: #4893ff;
+    transition: .1s ease-in-out;
+}
+
+.rect__button:focus {
+    outline: 0;
+}
+
+.rect__button-selected {
+    background-color: #4893ff;
+    color: #fff;
+}

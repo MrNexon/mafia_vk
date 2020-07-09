@@ -1,0 +1,5 @@
+@import "../style.css";
+
+.page__header {
+    margin-block-end: 1em !important;
+}

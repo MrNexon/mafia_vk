@@ -1,0 +1,126 @@
+.user__block {
+    display: inline-block;
+    margin: 10px 10px 0;
+}
+
+.user__card {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 1px 1px rgba(160, 159, 160, 0.3);
+    transition: .1s ease-in-out;
+    position: relative;
+}
+
+.user__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.user__card.add::before {
+    background-image: url("https://mafia.mtdl.ru/icons/plus.svg") !important;
+}
+
+.user__card.wait::before {
+    background-image: url("https://mafia.mtdl.ru/icons/clock.svg") !important;
+}
+
+.user__avatar {
+    background-size: cover;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: 2;
+}
+
+.user__title {
+    margin-top: 5px;
+    color: #747474;
+    max-width: 50px;
+    max-height: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.select__counter {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    border-radius: 5px;
+    color: white;
+    background-color: #4893ff;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    z-index: 3;
+}
+
+.empty_user {
+    background-image: url("https://mafia.mtdl.ru/icons/plus.svg") !important;
+    background-size: 25px;
+}
+
+.user__select {
+    box-shadow: 0 0 0 4px #4893ff !important;
+    border: none;
+}
+
+.partner__select {
+    box-shadow: 0 0 0 4px rgba(255, 72, 72, 0.7);
+    border: none;
+}
+
+.user__choose {
+    box-shadow: 0 0 0 4px #50c878 !important;
+    border: none;
+}
+
+.user__avatar.user__kill {
+    filter: brightness(0.4);
+}
+
+.key__counter {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 10;
+    color: white;
+    font-size: 1.5em;
+    line-height: 50px;
+}
+
+.user__card.user__kill::after {
+    content: '';
+    background-image: url("https://mafia.mtdl.ru/icons/kill.svg");
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    filter: invert(100%) brightness(1);
+    z-index: 4;
+}
+
+.disable {
+    filter: grayscale(1);
+}

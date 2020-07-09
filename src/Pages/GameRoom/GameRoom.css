@@ -1,0 +1,6 @@
+@import "../style.css";
+
+.game__action.hide {
+    opacity: 0 !important;
+    display: none;
+}

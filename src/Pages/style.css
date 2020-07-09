@@ -1,0 +1,46 @@
+.buttons__footer{
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.logo__footer{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.control__button {
+    margin: 5px !important;
+}
+
+.control__primary {
+    background-color: #4893ff;
+}
+
+.outline__button-primary {
+    background-color: transparent;
+    color: #4893ff;
+    border-color: #4893ff;
+}
+
+.outline__button-cancel {
+    background-color: transparent;
+    color: #ff0944;
+    border-color: #ff0944;
+}
+
+.logo {
+    background-image: url("https://mafia.mtdl.ru/img/hahlogo.png");
+    background-position: center;
+    background-size: 110px;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 20px;
+}
+
+.center-header__title {
+    margin-block-end: 0.2em;
+}
+
+.center_subheader__title {
+    margin-block-end: 1em;
+}
