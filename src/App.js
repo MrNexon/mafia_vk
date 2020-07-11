@@ -33,7 +33,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        /*this.setPopout(<ScreenSpinner/>);
+        this.setPopout(<ScreenSpinner/>);
         this.API = new API();
         WS.onError = this.wsError;
 
@@ -42,7 +42,7 @@ class App extends React.Component {
               this.connect();
               this.setPopout(null);
           })
-          .catch();*/
+          .catch();
     }
 
     setPopout(element) {
