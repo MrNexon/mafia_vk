@@ -77,7 +77,7 @@ class CreateRoom extends Component {
                         <Title level="1" weight="bold" className="center-header__title">Создание комнаты</Title>
                         <Subhead weight="regular" className="center_subheader__title">Выберите количество игроков</Subhead>
                         <Table>
-                            {this.renderButtons(12)}
+                            {this.renderButtons(16)}
                         </Table>
                         <Subhead weight="bold" style={{marginTop: 20}}>Открытая</Subhead>
                         <Switch defaultChecked onClick={(event) => this.setState({publish: event.target.checked})} style={{display: 'inline-block', marginTop: 10}}/>
