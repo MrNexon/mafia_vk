@@ -15,11 +15,11 @@ class Home extends React.Component {
             <Panel id={this.props.id}>
                 <CenterPanel>
                     <Title level="1" weight="bold" className="name__title">Добро пожаловать!</Title>
-                    <Subhead weight="regular" className="center_subheader__title">Внимательно ознакомьтесь с инструкцией и правилами перед началом использования</Subhead>
+                    <Subhead weight="regular" className="center_subheader__title">Приложение постоянно тестируется, возможно большое количество ошибок!</Subhead>
                     {/*{(API.userData.id === 152879324 || API.userData.id === 587556497) && (<BigButton className="button__create-room" onClick={this.props.action_create}>Создать</BigButton>)}
                     {(API.userData.id === 152879324 || API.userData.id === 587556497) && (<BigButton className="button__connect-room" onClick={this.props.action_rooms}>Комнаты</BigButton>)}*/}
                     {/*{(API.userData.id === 152879324 || API.userData.id === 587556497) && (<BigButton className="button__create-room" onClick={this.props.action_create}>Создать</BigButton>)}*/}
-                    <BigButton className="button__create-room" onClick={this.props.action_create}>Создать</BigButton>
+                    <BigButton className="button__create-room" onClick={() => alert(window.navigator.vibrate(200))}>Создать</BigButton>
                     <BigButton className="button__connect-room" onClick={this.props.action_rooms}>Комнаты</BigButton>
                 </CenterPanel>
 
