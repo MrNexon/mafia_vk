@@ -20,7 +20,7 @@ class Home extends React.Component {
                     {/*{(API.userData.id === 152879324 || API.userData.id === 587556497) && (<BigButton className="button__create-room" onClick={this.props.action_create}>Создать</BigButton>)}
                     {(API.userData.id === 152879324 || API.userData.id === 587556497) && (<BigButton className="button__connect-room" onClick={this.props.action_rooms}>Комнаты</BigButton>)}*/}
                     {/*{(API.userData.id === 152879324 || API.userData.id === 587556497) && (<BigButton className="button__create-room" onClick={this.props.action_create}>Создать</BigButton>)}*/}
-                    <BigButton className="button__create-room" onClick={() => audio.play()}>Создать</BigButton>
+                    <BigButton className="button__create-room" onClick={this.props.action_create}>Создать</BigButton>
                     <BigButton className="button__connect-room" onClick={this.props.action_rooms}>Комнаты</BigButton>
                 </CenterPanel>
 
