@@ -43,7 +43,7 @@ class App extends React.Component {
             .then(() => {
                 this.connect();
             });*/
-        bridge.subscribe((e) => alert(e));
+        bridge.subscribe((e) => console.log(e));
 
         this.API.initVkUserData()
           .then(() => {
