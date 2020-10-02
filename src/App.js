@@ -39,11 +39,9 @@ class App extends React.Component {
         this.API = new API();
         WS.onError = this.wsError;
         
-        /*bridge.send("VKWebAppViewRestore", {})
-            .then(() => {
-                this.connect();
-            });*/
-        bridge.subscribe((e) => console.log(e));
+        bridge.subscribe((e) => {
+            if (e.detail.type === "VKWebAppViewRestore") this.connect();
+        });
 
         this.API.initVkUserData()
           .then(() => {
