@@ -13,6 +13,7 @@ import WS from "./API/WS";
 import WaitRoom from "./Pages/WaitRoom/WaitRoom";
 import RoleScreen from "./Pages/RoleScreen/RoleScreen";
 import CheckCode from "./Pages/CheckCode/CheckCode";
+import APIRoom from "./API/APIRoom";
 
 var subtitle;
 
