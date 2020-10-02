@@ -20,8 +20,10 @@ class WS {
     static PUBLIC_MODE = 0;
 
     static connect() {
+        if (!WS.connected) return 0;
         console.log("Connect to WebSocket server");
         WS.connected = true;
+        
         let host = "wss://api.mtdl.ru/ws/mafia/?name="+ API.userData.first_name + "&id=" + API.userData.id;
         if (APIRoom.roomId !== null && APIRoom.token !== null) {
             host += "&room_id=" + APIRoom.roomId + "&token=" + APIRoom.token;
