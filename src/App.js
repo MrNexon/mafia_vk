@@ -1,7 +1,7 @@
 import React from 'react';
 import {Root, View, Snackbar, Avatar, Alert, ScreenSpinner} from '@vkontakte/vkui';
 import Icon24Cancel from '@vkontakte/icons/dist/24/cancel';
-
+import bridge from '@vkontakte/vk-bridge';
 
 import '@vkontakte/vkui/dist/vkui.css';
 import Home from "./Pages/Home/Home";
@@ -24,7 +24,9 @@ class App extends React.Component {
         this.showError = this.showError.bind(this);
         this.showErrorDialog = this.showErrorDialog.bind(this);
         this.connect = this.connect.bind(this);
-
+        
+        
+        
         this.state = {
             activeView: 'start',
             activePanel: 'start_screen',
@@ -36,6 +38,11 @@ class App extends React.Component {
         this.setPopout(<ScreenSpinner/>);
         this.API = new API();
         WS.onError = this.wsError;
+        
+        bridge.send("VKWebAppViewRestore", {})
+            .then(() => {
+                this.connect();
+            });
 
         this.API.initVkUserData()
           .then(() => {
