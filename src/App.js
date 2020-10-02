@@ -101,6 +101,7 @@ class App extends React.Component {
     }
 
     connect() {
+        if (APIRoom.roomId !== null) return 0;
         var params = window
             .location
             .hash
