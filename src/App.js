@@ -40,7 +40,7 @@ class App extends React.Component {
         WS.onError = this.wsError;
         
         bridge.subscribe((e) => {
-            if (e.detail.type === "VKWebAppViewRestore") this.connect();
+            if (e.detail.type === "VKWebAppViewRestore" && APIRoom.roomId === null) this.connect();
         });
 
         this.API.initVkUserData()
