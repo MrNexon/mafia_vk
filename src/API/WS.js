@@ -20,7 +20,7 @@ class WS {
     static PUBLIC_MODE = 0;
 
     static connect() {
-        if (!WS.connected) return 0;
+        if (WS.connected) return 0;
         console.log("Connect to WebSocket server");
         WS.connected = true;
         
