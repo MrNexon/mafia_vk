@@ -126,8 +126,8 @@ class NewHome extends Component {
 
                             <Group separator="hide">
                                 <CardGrid>
-                                    <BigButton onClick={this.props.action_create} icon={<Icon28GameOutline/>}>Создать комнату</BigButton>
-                                    <BigButton onClick={this.props.action_rooms} icon={<Icon28ArticleOutline/>}>Список комнат</BigButton>
+                                    <BigButton onClick={this.props.action_create} icon={<Icon28GameOutline/>}>Играть</BigButton>
+                                    <BigButton onClick={this.props.action_rooms} icon={<Icon28ArticleOutline/>}>Комнаты</BigButton>
                                 </CardGrid>
                             </Group>
 
