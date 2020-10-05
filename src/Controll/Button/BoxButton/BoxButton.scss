@@ -1,0 +1,78 @@
+@import "BoxButtonValue";
+@import '../../../Colors';
+@import "../../ControllValue";
+@import "../../SuperEllipse";
+
+$SuperEllipseResolution: 24px;
+
+.BoxButton {
+  display: inline-block;
+
+  margin-block-start: $ButtonMargin;
+  margin-inline-start: $ButtonMargin;
+
+  position: relative;
+
+  width: $ButtonSize;
+  height: $ButtonSize;
+
+  font-family: var(--font-tt);
+
+  &:first-child {
+    margin-inline-start: 0;
+  }
+
+  --BackgroundColor: #{$BackgroundColor};
+  --TextColor: #{$AccentNormalColor};
+
+  &_active {
+    --BackgroundColor: #{$AccentNormalColor};
+    --TextColor: #FFF;
+  }
+
+  &::before {
+    display: var(--BorderDisplay);
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: -1;
+
+    @include super-rectangle($SuperEllipseResolution, $SuperEllipseResolution, $AccentNormalColor);
+  }
+
+  &-Wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    width: $ButtonSize - $BorderWidth * 2;
+    height: $ButtonSize - $BorderWidth * 2;
+
+    margin: $BorderWidth;
+
+    @include super-rectangle($SuperEllipseResolution, $SuperEllipseResolution, $BackgroundColor);
+  }
+
+  &_active &-Wrapper {
+    @include super-rectangle($SuperEllipseResolution, $SuperEllipseResolution, $AccentNormalColor);
+  }
+
+  &-Text {
+    font: {
+      weight: 500;
+      size: $TextSize;
+    }
+
+    color: var(--TextColor);
+
+    transform: translateY(10%);
+  }
+}

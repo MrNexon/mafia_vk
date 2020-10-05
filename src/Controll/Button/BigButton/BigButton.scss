@@ -1,0 +1,40 @@
+@import "BigButtonValue";
+@import '../../../Colors';
+@import "../../ControllValue";
+
+
+.BigButton {
+  display: block;
+  margin-bottom: $CardMargin;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &-Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: $ButtonHeight;
+
+    background-color: $CardBackground;
+
+    border-radius: $BorderRadius;
+  }
+
+  &-Icon {
+    margin-right: $IconMargin;
+    transform: translateY(-1px);
+  }
+
+  &-Text {
+    font: {
+      family: var(--font-tt);
+      weight: $TextWeight;
+      size: $TextSize;
+    }
+
+    transform: translateY(8%);
+  }
+}

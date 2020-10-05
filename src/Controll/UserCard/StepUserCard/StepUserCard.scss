@@ -1,0 +1,60 @@
+@import "../../ControllValue";
+@import "StepUserCardValue";
+@import '../../../Colors';
+
+.StepUserCard {
+  display: block;
+  font-family: var(--font-tt);
+
+  &-Wrapper {
+    background-color: $CardBackground;
+    border-radius: $BorderRadius;
+
+    display: flex;
+    align-items: center;
+
+    width: $CardWidth;
+    height: $CardHeight;
+  }
+
+  &-AvatarImage {
+    width: $AvatarSize;
+    height: $AvatarSize;
+
+    background: {
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    };
+
+    border-radius: $BorderRadius;
+  }
+
+  &-CardContent {
+    flex: 1;
+    margin: 0 $UserContentMargin;
+
+    text-align: center;
+  }
+}
+
+.CardContent {
+  &-Timer {
+    font: {
+      weight: 600;
+      size: $TimerTextSize;
+    }
+
+    color: $DestructiveNormalColor;
+  }
+
+  &-Action {
+    font: {
+      weight: 400;
+      size: $ActionTextSize;
+    }
+
+    color: $SubtitleTextColor;
+    line-height: 85%;
+  }
+}

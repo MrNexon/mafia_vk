@@ -1,0 +1,56 @@
+@import "StatisticsCardValue";
+@import '../../Colors';
+@import "../ControllValue";
+
+.StatisticsCard {
+  display: inline-block;
+  font-family: var(--font-tt);
+  margin-right: $CardMargin;
+
+  flex: 1;
+
+  &-Wrapper {
+    height: $CardHeight;
+
+    border-radius: $BorderRadius;
+    background-color: $CardBackground;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    padding: 0 $PaddingBox;
+  }
+
+  &-Icon {
+    width: $IconSize;
+    height: $IconSize;
+    margin-right: $IconMargin;
+  }
+
+  &-Text {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.Text {
+  &-Counter {
+    font: {
+      weight: 500;
+      size: $CounterSize;
+    }
+  }
+
+  &-Subject {
+    font: {
+      weight: 400;
+      size: $SubjectSize;
+    }
+
+    color: $SubtitleTextColor;
+    line-height: 85%;
+  }
+}

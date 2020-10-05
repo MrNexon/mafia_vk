@@ -1,0 +1,60 @@
+@import "NewsCardValue";
+@import '../../Colors';
+@import "../ControllValue";
+
+.NewsCard {
+  font-family: var(--font-tt);
+  display: block;
+
+  height: $Height;
+
+  background-color: $CardBackground;
+  border-radius: $BorderRadius;
+
+  &-Wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+  }
+
+  &-Content {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    padding: 0 $ContentPadding;
+  }
+
+  &-Image {
+    flex: 5;
+    height: $Height;
+
+    background-size: cover;
+    background-position: center;
+
+    border-bottom-right-radius: $BorderRadius;
+    border-top-right-radius: $BorderRadius;
+  }
+}
+
+.Content {
+  &-Title {
+    font: {
+      weight: $TitleWeight;
+      size: $TitleSize;
+    }
+    line-height: 85%;
+  }
+
+  &-Subtitle {
+    font: {
+      weight: $SubtitleWeight;
+      size: $SubtitleSize;
+    }
+
+    color: $SubtitleTextColor;
+  }
+}

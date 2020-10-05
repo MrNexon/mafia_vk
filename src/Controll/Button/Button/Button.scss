@@ -1,0 +1,77 @@
+@import '../../../Colors';
+@import "../../ControllValue";
+@import "ButtonValue";
+:root {
+  --Accent: #{$AccentNormalColor};
+  --Primary: #FFF;
+}
+
+.Button {
+  display: inline-block;
+
+  margin-block-start: $ButtonMargin;
+  margin-inline-start: $ButtonMargin;
+
+  --BackgroundColor: var(--Accent);
+  --TextColor: var(--Primary);
+  --BorderColor: var(--Accent);
+  font-family: var(--font-tt);
+
+  &:first-child {
+    margin-inline-start: 0;
+  }
+
+  &-Wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    height: $ButtonHeight;
+
+    padding: 0 $ButtonPadding;
+
+    border: {
+      width: $BorderWidth;
+      color: var(--BorderColor);
+      radius: $ButtonBorderRadius;
+      style: solid;
+    }
+
+    background-color: var(--BackgroundColor);
+  }
+
+  &-Text {
+    font: {
+      weight: 400;
+      size: $TextSize;
+    }
+
+    color: var(--TextColor);
+
+    transform: translateY(10%);
+  }
+}
+
+.Button[data-style='outline'] {
+  --BackgroundColor: #{$BackgroundColor};
+  --TextColor: var(--Accent);
+  --BorderColor: var(--Accent);
+}
+
+.Button[data-mode='normal'] {
+  --Accent: #{$AccentNormalColor};
+  --Primary: #FFF;
+}
+
+.Button[data-mode='destructive'] {
+  --Accent: #{$DestructiveNormalColor};
+  --Primary: #FFF;
+}
+
+.Button[data-mode='success'] {
+  --Accent: #{$SuccessNormalColor};
+  --Primary: #FFF;
+}

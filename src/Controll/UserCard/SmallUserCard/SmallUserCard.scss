@@ -1,0 +1,94 @@
+@import 'SmallUserCardValue';
+@import "../../ControllValue";
+@import '../../../Colors';
+@import '../../../Font/TTCommons/TTCommons.css';
+
+.SmallUserCard {
+  display: inline-block;
+  margin-block-start: $CardMargin;
+  margin-inline-start: $CardMargin;
+  font-family: var(--font-tt);
+
+  &:first-child {
+    margin-inline-start: 0;
+  }
+
+  &-Wrapper {
+    text-align: center;
+  }
+
+  &-AvatarImage {
+    border: {
+      radius: $BorderRadius;
+      width: $CardBorderWidth;
+      style: none;
+    }
+
+    box-sizing: border-box;
+
+    background: {
+      color: $BackgroundColor;
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    };
+
+    width: $CardAvatarSize;
+    height: $CardAvatarSize;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $AccentNormalColor;
+  }
+
+  &-UserText {
+    font: {
+      family: "TT Commons";
+      weight: 400;
+      size: $CardUserTextSize;
+    }
+
+    color: $SubtitleTextColor;
+
+    margin-top: $CardUserTextMargin;
+
+    max-width: $CardAvatarSize;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.AvatarImage {
+  &_empty {
+    border: {
+      color: $CardBorderColor;
+      style: solid;
+    }
+  }
+
+  &_step-select {
+    border: {
+      width: $CardInnerBorderWidth;
+      color: $AccentNormalColor;
+      style: solid;
+    }
+  }
+
+  &_user-select {
+    border: {
+      width: $CardInnerBorderWidth;
+      color: $SuccessNormalColor;
+      style: solid;
+    }
+  }
+
+  &_player-select {
+    border: {
+      width: $CardInnerBorderWidth;
+      color: $DestructiveNormalColor;
+      style: solid;
+    }
+  }
+}

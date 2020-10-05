@@ -4,7 +4,9 @@ import Icon24Cancel from '@vkontakte/icons/dist/24/cancel';
 import bridge from '@vkontakte/vk-bridge';
 
 import '@vkontakte/vkui/dist/vkui.css';
-import Home from "./Pages/Home/Home";
+import "./VKFix.scss";
+
+import NewHome from "./Pages/NewHome/NewHome";
 import CreateRoom from "./Pages/CreateRoom/CreateRoom";
 import GameRoom from "./Pages/GameRoom/GameRoom";
 import RoomList from "./Pages/RoomList/RoomList";
@@ -136,8 +138,7 @@ class App extends React.Component {
                     <CheckCode id="check_code"
                                popout={this.setPopout}
                                action_done={() => this.setState({activePanel: 'start_screen'})}/>
-                    <Home id="start_screen"
-                          api={this.API}
+                    <NewHome id="start_screen"
                           subtitle={subtitle}
                           action_create={() => this.setState({activePanel: 'create_room'})}
                           action_rooms={() => {this.setState({activeView: 'room_list'})}}/>
