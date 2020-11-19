@@ -33,7 +33,7 @@ class CreateRoom extends Component {
 
     renderButtons(count) {
         let content = [];
-        for (let i = 5; i <= count; i++) {
+        for (let i = 2; i <= count; i++) {
             content.push(<RectButton selected={this.state.usersCount === i} onClick={this.setUsersCount}>{i}</RectButton>);
         }
         return content;
