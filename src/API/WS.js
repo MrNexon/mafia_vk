@@ -58,7 +58,7 @@ class WS {
         WS.connected = false;
         if (event.wasClean) return 0;
         if (WS.onClose !== null) WS.onClose(event);
-        this.connect();
+        //this.connect();
     }
 
     static onMessageEvent(event) {
