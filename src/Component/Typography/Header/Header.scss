@@ -1,0 +1,33 @@
+@import "../TypographyValue";
+
+:root {
+  --HeaderWeigth: #{$Header1Weight};
+  --HeaderSize: #{$Header1Size};
+}
+
+.Header {
+  font: {
+    weight: var(--HeaderWeigth);
+    size: var(--HeaderSize);
+    family: var(--font-tt);
+  };
+
+  line-height: 85%;
+
+  /*padding: {
+    top: $HeaderPadding !important;
+    bottom: $HeaderPadding !important;
+  };*/
+}
+
+.Div {
+  padding: {
+    top: $HeaderPadding;
+    bottom: $HeaderPadding;
+  };
+}
+
+.Header[data-level='2'] {
+  --HeaderWeigth: #{$Header2Weight};
+  --HeaderSize: #{$Header2Size};
+}

@@ -1,0 +1,69 @@
+@import "./Font/TTCommons/TTCommons.css";
+@import "Colors";
+
+:root {
+  --font-common: 'TT Commons' !important;
+  --font-tt: 'TT Commons' !important;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.PanelHeaderContent__children-in {
+  font-size: 16px !important;
+  line-height: 100% !important;
+  font-weight: 500 !important;
+  transform: translateY(1px);
+}
+
+.PanelHeader__separator {
+  opacity: .0;
+}
+
+.Card {
+  background: transparent !important;
+}
+
+/*.CardGrid--android, .Div--android {
+  padding-right: 5px !important;
+  padding-left: 5px !important;
+}*/
+
+.Group > :not(.Header):first-child {
+  //margin-top: 0;
+}
+
+.FixedLayout {
+  right: 0;
+}
+
+/*.Group ~.Group {
+  margin-bottom: 15px;
+}*/
+
+.SimpleCell__main, .SimpleCell__after {
+  transform: translateY(2px);
+}
+
+.SimpleCell__children {
+  font: {
+    family: var(--font-tt);
+    weight: 500;
+    size: 16px;
+  }
+  line-height: 16px;
+
+}
+
+.SimpleCell__description {
+  color: $SubtitleTextColor;
+  font: {
+    family: var(--font-tt);
+    weight: 400;
+    size: 12px;
+  }
+
+  margin-top: 0;
+}

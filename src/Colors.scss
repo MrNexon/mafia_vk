@@ -1,0 +1,25 @@
+$BackgroundColor: #FFF;
+$SubtitleTextColor: #676767;
+
+$CardBackground: #F3F3F3;
+
+$AccentNormalColor: #2F80ED;
+$DestructiveNormalColor: #F64056;
+$SuccessNormalColor: #27AE60;
+
+$CardBorderColor: rgba(0, 0, 0, 0.1);
+
+:root {
+  --background-color: #{$BackgroundColor};
+  --subtitle-text-color: #{$SubtitleTextColor};
+
+  --card-backgroud: #{$CardBackground};
+
+  --accent-normal-color: #{$AccentNormalColor};
+  --destructive-normal-color: #{$DestructiveNormalColor};
+  --success-normal-color: #{$SuccessNormalColor};
+
+  --card-border-color: #{$CardBorderColor};
+
+  --tabbar_active_icon: var(--accent-normal-color) !important;
+}

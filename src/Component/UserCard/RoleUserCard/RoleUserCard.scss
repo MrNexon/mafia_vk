@@ -1,0 +1,95 @@
+@import "RoleUserCardValue";
+
+.RoleUserCard {
+  display: block;
+  font-family: var(--font-tt);
+
+  --CardWidth: #{$CardWidth};
+  --CardHeight: #{$CardHeight};
+  --AvatarSize: #{$AvatarSize};
+  --RoleSize: #{$RoleTextSize};
+  --RoleMargin: 0;
+  --UserSize: #{$UserTextSize};
+  --FlexDirection: row;
+  --AlignItems: center;
+
+  &_expand {
+    --CardWidth: #{$CardWidth_expand};
+    --CardHeight: #{$CardHeight_expand};
+    --AvatarSize: #{$AvatarSize_expand};
+    --RoleMargin: #{$UserContentMargin};
+    --FlexDirection: column;
+    --AlignItems: initial;
+  }
+
+  &-Wrapper {
+    background-color: var(--card-backgroud);
+    border-radius: var(--component-border-radius);
+
+    display: flex;
+    align-items: center;
+
+    width: var(--CardWidth);
+    height: var(--CardHeight);
+  }
+
+  &-AvatarImage {
+    width: var(--AvatarSize);
+    height: var(--AvatarSize);
+
+    background: {
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    };
+
+    border-radius: var(--component-border-radius);
+  }
+
+  &-CardContentWrapper {
+    margin-left: $UserContentMargin;
+    display: flex;
+
+    flex-direction: var(--FlexDirection);
+    align-items: var(--AlignItems);
+    flex: 1;
+  }
+
+  &-CardContent {
+    flex: 0.8;
+  }
+
+  &-RoleImage {
+    height: $RoleImageHeight;
+    width: $RoleImageWidth;
+    margin-top: var(--RoleMargin);
+
+    background: {
+      size: contain;
+      position: center;
+      repeat: no-repeat;
+    }
+  }
+}
+
+.CardContent {
+  &-Role {
+    font: {
+      weight: 500;
+      size: $RoleTextSize;
+    }
+
+    line-height: 100%;
+  }
+
+  &-Name {
+    font: {
+      weight: 400;
+      size: $UserTextSize;
+    }
+
+    color: var(--subtitle-text-color);
+
+    line-height: 100%;
+  }
+}

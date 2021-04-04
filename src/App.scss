@@ -1,0 +1,12 @@
+:root {
+  --transition-scale-in: .3s cubic-bezier(.16, .78, .39, 1.35);
+  --transition-scale-out: .4s cubic-bezier(.59, -0.43, .76, .39);
+}
+
+body {
+  background-color: white;
+}
+
+.NoAnimation {
+  animation: none !important;
+}

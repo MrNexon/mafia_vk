@@ -1,0 +1,38 @@
+@import "LargeButtonValue";
+
+.LargeButton {
+  display: block;
+  margin-bottom: var(--card-margin);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &-Wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    height: $ButtonHeight;
+
+    background-color: var(--card-backgroud);
+
+    border-radius: var(--component-border-radius);
+  }
+
+  &-Icon {
+    margin-right: $IconMargin;
+    transform: translateY(-1px);
+  }
+
+  &-Text {
+    font: {
+      family: var(--font-tt);
+      weight: $TextWeight;
+      size: $TextSize;
+    }
+
+    transform: translateY(8%);
+  }
+}

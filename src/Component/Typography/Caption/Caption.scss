@@ -1,0 +1,21 @@
+@import "../TypographyValue";
+
+:root {
+  --CaptionWeigth: #{$Caption1Size};
+  --CaptuonSize: #{$Caption1Size};
+
+  --CaptionColor: var(--subtitle-text-color);
+}
+
+.Caption {
+  font: {
+    weight: var(--CaptionWeigth);
+    size: var(--CaptuonSize);
+  }
+
+  font-family: var(--font-tt);
+
+  line-height: 100%;
+
+  color: var(--CaptionColor);
+}

@@ -1,0 +1,19 @@
+.ErrorScreen {
+  background-color: var(--background-color);
+  &-Wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+  }
+
+  &-Icon {
+    margin-bottom: 15px;
+    color: var(--accent-normal-color);
+  }
+
+  &-Text {
+    text-align: center;
+  }
+}
