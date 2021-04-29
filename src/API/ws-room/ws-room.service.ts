@@ -6,6 +6,7 @@ import { RoomConnectInterface } from './interface/room-connect.interface';
 import { RoomUserListItemInterface } from './interface/room-user-list-item.interface';
 import { OnClientDisconnectInterface } from './interface/on-client-disconnect.interface';
 import { OnClientReconnectInterface } from './interface/on-client-reconnect.interface';
+import { BASE_URL } from '../APIConst';
 
 export declare interface WsRoomService {
 	on(event: 'connect-room', listener: (status: ResponseStatusInterface) => void): this;
@@ -22,8 +23,8 @@ export class WsRoomService extends EventEmitter {
 	private initConnection() {
 		if (this.socket?.connected) this.disconnect();
 
-		this.socket = io(`https://api.mtdl.ru`, {
-			path: '/mafia/ws',
+		this.socket = io(BASE_URL, {
+			path: '/api/ws',
 			query: {
 				access_token: APIService.UserData.token,
 			},
@@ -61,6 +62,7 @@ export class WsRoomService extends EventEmitter {
 		this.initEventHandlers();
 
 		this.socket?.on('connect', () => this.connectRoom(roomConnect));
+		this.socket?.on('error', () => console.log('socket error'));
 	}
 
 	connectRoom(roomConnect: RoomConnectInterface) {
