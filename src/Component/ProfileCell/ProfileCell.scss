@@ -1,0 +1,49 @@
+.ProfileCell {
+  span {
+    font-family: 'SF UI Display', serif;
+  }
+
+  img {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    border-radius: 35px;
+  }
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &-Block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &-Info {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+
+    &-Name {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    &-Level {
+      font-size: 14px;
+    }
+  }
+
+  &-GoButton {
+    background-color: #E9F6FF;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #48A7FF;
+  }
+}
