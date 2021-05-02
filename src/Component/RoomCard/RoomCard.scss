@@ -1,0 +1,55 @@
+.RoomCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: #F6F6F6;
+  border-radius: 10px;
+
+  padding: 14px 20px;
+
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &-Block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &:first-child {
+      margin-bottom: 10px;
+    }
+
+
+    &-Name {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    &-Number {
+      font-size: 11px;
+      font-weight: 500;
+      opacity: .5;
+    }
+
+    &-Player {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+
+      span {
+        margin-left: 8px;
+        font-weight: 500;
+        opacity: .5;
+      }
+    }
+
+    &-Icon {
+      color: #48A7FF;
+    }
+  }
+}
