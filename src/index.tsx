@@ -1,8 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { AppRoot } from '@vkontakte/vkui';
+import bridge from '@vkontakte/vk-bridge';
+import App from './App';
+import '@vkontakte/vkui/dist/vkui.css';
+import './VKFix.scss';
+import './Font/SF_UI/stylesheet.css';
+
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(<React.StrictMode />, document.getElementById('root'));
+bridge.send('VKWebAppInit', {});
+
+ReactDOM.render(
+  <React.StrictMode>
+    <AppRoot>
+      <App />
+    </AppRoot>
+  </React.StrictMode>,
+  document.getElementById('root'),
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
