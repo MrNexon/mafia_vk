@@ -2,6 +2,18 @@
   --page-padding: 21px;
 }
 
+:root {
+  --gradient-basic-cyan: linear-gradient(257.34deg, #93D8FF 9.37%, #9AC8FF 97.21%);
+  --gradient-basic-brown: linear-gradient(252.57deg, #846363 31.16%, #756464 89.52%);
+  --gradient-basic-orange: linear-gradient(112.02deg, #FFDC99 -2.55%, #FFBC96 96.83%);
+
+  --gradient-light-purple:  linear-gradient(280.7deg, #F0EEFF 21.55%, #FFF1F9 85.61%);
+
+  --gradient-bright-red: linear-gradient(85.92deg, #FF9393 10.71%, #FF9ABE 95.61%);
+  --gradient-bright-purple: linear-gradient(266.68deg, #CEB7FF 21.97%, #8994FB 90.7%);
+  --gradient-bright-blue: linear-gradient(217.58deg, #A6EAFF 0.86%, #97AEFF 100.54%);
+}
+
 
 .PageMargin {
   margin-left: var(--page-padding);
