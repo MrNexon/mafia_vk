@@ -5,7 +5,7 @@ import './ProfileCell.scss';
 class ProfileCell extends Component {
   render() {
     return (
-      <div className='ProfileCell'>
+      <div className='PageMargin ProfileCell'>
         <div className='ProfileCell-Block'>
           <img src='ES9P2Ws9UK8.jpg' />
           <div className='ProfileCell-Info'>

@@ -1,0 +1,11 @@
+.ScrollWrapper {
+  display: flex;
+  width: min-content;
+
+  padding-right: var(--page-padding);
+  padding-left: var(--page-padding);
+
+  .Card:last-child {
+    margin-right: 0;
+  }
+}

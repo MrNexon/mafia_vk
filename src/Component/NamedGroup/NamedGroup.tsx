@@ -6,7 +6,7 @@ class NamedGroup extends Component {
     const { children } = this.props;
     return (
       <div className='NamedGroup'>
-        <span className='NamedGroup-Header'>Играть</span>
+        <span className='PageMargin NamedGroup-Header'>Играть</span>
         <div className='NamedGroup-Wrapper'>{children}</div>
       </div>
     );

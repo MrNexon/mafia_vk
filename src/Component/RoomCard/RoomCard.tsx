@@ -6,7 +6,7 @@ import { Icon24ArrowRightOutline } from '@vkontakte/icons';
 class RoomCard extends Component {
   render() {
     return (
-      <div className='RoomCard'>
+      <div className='PageMargin RoomCard'>
         <div className='RoomCard-Block'>
           <span className='RoomCard-Block-Name'>Городская</span>
           <span className='RoomCard-Block-Number'>#1231231</span>

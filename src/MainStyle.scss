@@ -1,0 +1,9 @@
+:root {
+  --page-padding: 21px;
+}
+
+
+.PageMargin {
+  margin-left: var(--page-padding);
+  margin-right: var(--page-padding);
+}

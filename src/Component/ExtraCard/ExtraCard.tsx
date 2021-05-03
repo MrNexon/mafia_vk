@@ -7,7 +7,7 @@ import { UsersStack } from '@vkontakte/vkui';
 class ExtraCard extends Component {
   render() {
     return (
-      <div className='ExtraCard'>
+      <div className='PageMargin ExtraCard'>
         <Icon28GameOutline width={139} height={139} className='ExtraCard-Icon' />
         <div className='ExtraCard-Info'>
           <div className='ExtraCard-Info-Text'>

@@ -6,6 +6,7 @@ import App from './App';
 import '@vkontakte/vkui/dist/vkui.css';
 import './VKFix.scss';
 import './Font/SF_UI/stylesheet.css';
+import './MainStyle.scss';
 
 import reportWebVitals from './reportWebVitals';
 

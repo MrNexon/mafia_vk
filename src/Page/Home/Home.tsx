@@ -7,6 +7,7 @@ import ExtraCard from '../../Component/ExtraCard/ExtraCard';
 import NamedGroup from '../../Component/NamedGroup/NamedGroup';
 import Card from '../../Component/Card/Card';
 import RoomCard from '../../Component/RoomCard/RoomCard';
+import ScrollWrapper from '../../Component/ScrollWrapper/ScrollWrapper';
 
 class Home extends Component<IRootProps, any> {
   render() {
@@ -19,46 +20,17 @@ class Home extends Component<IRootProps, any> {
             <ExtraCard />
             <NamedGroup>
               <HorizontalScroll>
-                <div style={{ display: 'flex', width: 'max-content' }}>
+                <ScrollWrapper>
                   <Card />
                   <Card />
                   <Card />
                   <Card />
                   <Card />
                   <Card />
-                </div>
+                </ScrollWrapper>
               </HorizontalScroll>
             </NamedGroup>
             <NamedGroup>
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
               <RoomCard />
               <RoomCard />
               <RoomCard />
