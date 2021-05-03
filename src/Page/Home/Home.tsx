@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { HorizontalScroll, Panel, PanelHeader, View } from '@vkontakte/vkui';
+import { Group, HorizontalScroll, Panel, PanelHeader, View } from '@vkontakte/vkui';
+import { Icon28GameOutline } from '@vkontakte/icons';
 import IRootProps from '../IRootProps';
 import ProfileCell from '../../Component/ProfileCell/ProfileCell';
 import ContentWrapper from '../../Component/ContentWrapper/ContentWrapper';
@@ -17,7 +18,12 @@ class Home extends Component<IRootProps, any> {
           <PanelHeader separator={false}>Мафия</PanelHeader>
           <ContentWrapper>
             <ProfileCell />
-            <ExtraCard />
+            <ExtraCard
+              header='Твои друзья уже в игре!'
+              subheader='Подключайся к комнате'
+              type='attention'
+              icon={<Icon28GameOutline />}
+            />
             <NamedGroup>
               <HorizontalScroll>
                 <ScrollWrapper>

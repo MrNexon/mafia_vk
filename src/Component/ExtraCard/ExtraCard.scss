@@ -3,11 +3,9 @@
     font-family: 'SF UI Display', serif;
   }
 
-  background: linear-gradient(85.92deg, #FF9393 10.71%, #FF9ABE 95.61%);
   position: relative;
   height: 115px;
   border-radius: 15px;
-  color: white;
   overflow: hidden;
 
   display: flex;
@@ -23,6 +21,11 @@
     right: -30px;
     top: -13px;
     opacity: .15;
+
+    .vkuiIcon, .vkuiIcon svg {
+      width: 139px !important;
+      height: 139px !important;
+    }
   }
 
   &-Info {
@@ -44,5 +47,15 @@
         font-size: 13px;
       }
     }
+  }
+
+  &[data-type='attention'] {
+    background: var(--gradient-bright-red);
+    color: white;
+  }
+
+  &[data-type='info'] {
+    background: var(--gradient-bright-purple);
+    color: white;
   }
 }
