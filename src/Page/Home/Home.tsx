@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Group, HorizontalScroll, Panel, PanelHeader, View } from '@vkontakte/vkui';
-import { Icon28GameOutline } from '@vkontakte/icons';
+import { Icon28GameOutline, Icon28PlaceOutline } from '@vkontakte/icons';
+
 import IRootProps from '../IRootProps';
 import ProfileCell from '../../Component/ProfileCell/ProfileCell';
 import ContentWrapper from '../../Component/ContentWrapper/ContentWrapper';
@@ -10,10 +11,11 @@ import Card from '../../Component/Card/Card';
 import RoomCard from '../../Component/RoomCard/RoomCard';
 import ScrollWrapper from '../../Component/ScrollWrapper/ScrollWrapper';
 
-class Home extends Component<IRootProps, any> {
+class Home extends Component<IRootProps> {
   render() {
+    const { id } = this.props;
     return (
-      <View activePanel='main'>
+      <View activePanel='main' id={id}>
         <Panel id='main'>
           <PanelHeader separator={false}>Мафия</PanelHeader>
           <ContentWrapper>
