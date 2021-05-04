@@ -1,0 +1,56 @@
+.AvailabilityCard {
+  position: relative;
+  height: 120px;
+  width: 100%;
+
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: white;
+  color: var(--availability-card-color);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+
+    margin: -3px;
+    border-radius: 17px;
+    background: var(--availability-card-background-gradient);
+  }
+
+  &_select {
+    background: var(--availability-card-background-gradient);
+    color: var(--availability-card-color-active);
+  }
+
+  &-Icon {
+    .vkuiIcon, .vkuiIcon svg {
+      width: 40px !important;
+      height: 40px !important;
+    }
+    margin-bottom: 12px;
+  }
+
+  span {
+    font-family: 'SF UI Display', serif;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &[data-color='basic-orange'] {
+    --availability-card-background-gradient: var(--gradient-basic-orange);
+    --availability-card-color-active: white;
+    --availability-card-color: var(--color-basic-orange);
+  }
+
+  &[data-color='bright-blue'] {
+    --availability-card-background-gradient: var(--gradient-bright-blue);
+    --availability-card-color-active: white;
+    --availability-card-color: var(--color-bright-blue);
+  }
+}
