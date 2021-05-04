@@ -27,12 +27,17 @@ class Home extends Component<IRootProps, any> {
             <NamedGroup header='Играть'>
               <HorizontalScroll>
                 <ScrollWrapper>
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
+                  <Card
+                    header='Городская мафия'
+                    subheader='Мафия, дон, комиссар и дополнительные роли'
+                    color='basic-cyan'
+                  />
+                  <Card
+                    header='Классическая мафия'
+                    subheader='Мафия, дон, комиссар и ничего лишнего'
+                    color='basic-brown'
+                  />
+                  <Card header='Турнирная мафия' subheader='Скоро' color='light-purple' />
                 </ScrollWrapper>
               </HorizontalScroll>
             </NamedGroup>

@@ -5,12 +5,10 @@
 
   margin-right: 10px;
 
-  background: linear-gradient(257.34deg, #93D8FF 9.37%, #9AC8FF 97.21%);
   position: relative;
   min-width: 255px;
   min-height: 127px;
   border-radius: 15px;
-  color: white;
   overflow: hidden;
 
   display: flex;
@@ -43,5 +41,20 @@
         font-weight: 500;
       }
     }
+  }
+
+  &[data-color='basic-cyan'] {
+    background: var(--gradient-basic-cyan);
+    color: white;
+  }
+
+  &[data-color='basic-brown'] {
+    background: var(--gradient-basic-brown);
+    color: white;
+  }
+
+  &[data-color='light-purple'] {
+    background: var(--gradient-light-purple);
+    color: black;
   }
 }
