@@ -1,0 +1,12 @@
+.AvailabilityRow {
+  display: flex;
+  flex-direction: row;
+
+  .AvailabilityCard {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
