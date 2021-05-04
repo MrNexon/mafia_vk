@@ -3,14 +3,18 @@ import './NamedGroup.scss';
 
 interface INamedGroupProps {
   header: string;
+  subheader?: string;
 }
 
 class NamedGroup extends Component<INamedGroupProps> {
   render() {
-    const { children, header } = this.props;
+    const { children, header, subheader } = this.props;
     return (
       <div className='NamedGroup'>
-        <span className='PageMargin NamedGroup-Header'>{header}</span>
+        <div className='PageMargin NamedGroup-Text'>
+          <span className='NamedGroup-Header'>{header}</span>
+          {subheader && <span className='NamedGroup-Subheader'>{subheader}</span>}
+        </div>
         <div className='NamedGroup-Wrapper'>{children}</div>
       </div>
     );
