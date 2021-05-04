@@ -24,7 +24,7 @@ class Home extends Component<IRootProps, any> {
               type='attention'
               icon={<Icon28GameOutline />}
             />
-            <NamedGroup>
+            <NamedGroup header='Играть'>
               <HorizontalScroll>
                 <ScrollWrapper>
                   <Card />
@@ -36,7 +36,7 @@ class Home extends Component<IRootProps, any> {
                 </ScrollWrapper>
               </HorizontalScroll>
             </NamedGroup>
-            <NamedGroup>
+            <NamedGroup header='Ожидают игры'>
               <RoomCard />
               <RoomCard />
               <RoomCard />

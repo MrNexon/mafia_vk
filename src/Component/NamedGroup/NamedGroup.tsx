@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import './NamedGroup.scss';
 
-class NamedGroup extends Component {
+interface INamedGroupProps {
+  header: string;
+}
+
+class NamedGroup extends Component<INamedGroupProps> {
   render() {
-    const { children } = this.props;
+    const { children, header } = this.props;
     return (
       <div className='NamedGroup'>
-        <span className='PageMargin NamedGroup-Header'>Играть</span>
+        <span className='PageMargin NamedGroup-Header'>{header}</span>
         <div className='NamedGroup-Wrapper'>{children}</div>
       </div>
     );
