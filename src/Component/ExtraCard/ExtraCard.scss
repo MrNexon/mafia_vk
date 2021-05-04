@@ -6,7 +6,6 @@
   position: relative;
   height: 115px;
   border-radius: 15px;
-  overflow: hidden;
 
   display: flex;
   flex-direction: row;
@@ -16,9 +15,27 @@
   box-sizing: border-box;
   padding: 16px 21px;
 
+  &:after {
+    content: '';
+    position: absolute;
+    top: -13px;
+    right: -13px;
+    bottom: -13px;
+    left: -13px;
+
+    background: inherit;
+    border-radius: inherit;
+
+    filter: blur(18px);
+
+    opacity: .3;
+    z-index: -1;
+  }
+
   &-Icon {
     position: absolute;
-    right: -30px;
+    width: calc(139px - 30px);
+    right: 0;
     top: -13px;
     opacity: .15;
 
