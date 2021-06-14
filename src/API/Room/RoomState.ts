@@ -1,5 +1,5 @@
-import { RoomType } from './Type/RoomType';
+import { PublicRoomType } from './Type/PublicRoomType';
 
 export interface RoomState {
-  RoomList: RoomType[];
+  RoomList: PublicRoomType[];
 }

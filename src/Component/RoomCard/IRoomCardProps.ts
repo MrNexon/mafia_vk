@@ -1,5 +1,5 @@
-import { RoomType } from '../../API/Room/Type/RoomType';
+import { PublicRoomType } from '../../API/Room/Type/PublicRoomType';
 
 export interface IRoomCardProps {
-  Room: RoomType;
+  Room: PublicRoomType;
 }
