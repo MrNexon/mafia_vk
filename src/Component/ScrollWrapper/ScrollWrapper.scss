@@ -5,7 +5,8 @@
   padding-right: var(--page-padding);
   padding-left: var(--page-padding);
 
-  .Card:last-child {
+  .Card:last-child,
+  .RoleCard:last-child {
     margin-right: 0;
   }
 }
