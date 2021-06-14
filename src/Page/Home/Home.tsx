@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Group, HorizontalScroll, Panel, PanelHeader, View } from '@vkontakte/vkui';
-import { Icon28GameOutline, Icon28PlaceOutline } from '@vkontakte/icons';
+import { HorizontalScroll, Panel, PanelHeader, View } from '@vkontakte/vkui';
+import { Icon28GameOutline } from '@vkontakte/icons';
 
 import IRootProps from '../IRootProps';
 import ProfileCell from '../../Component/ProfileCell/ProfileCell';
@@ -10,16 +10,18 @@ import NamedGroup from '../../Component/NamedGroup/NamedGroup';
 import Card from '../../Component/Card/Card';
 import RoomCard from '../../Component/RoomCard/RoomCard';
 import ScrollWrapper from '../../Component/ScrollWrapper/ScrollWrapper';
+import { connect } from 'react-redux';
+import { mapStateToProps } from '../../API/Redux/Hooks';
 
 class Home extends Component<IRootProps> {
   render() {
-    const { id } = this.props;
+    const { id, storeState } = this.props;
     return (
       <View activePanel='main' id={id}>
         <Panel id='main'>
           <PanelHeader separator={false}>Мафия</PanelHeader>
           <ContentWrapper>
-            <ProfileCell />
+            <ProfileCell User={storeState.User} />
             <ExtraCard
               header='Твои друзья уже в игре!'
               subheader='Подключайся к комнате'
@@ -55,4 +57,4 @@ class Home extends Component<IRootProps> {
   }
 }
 
-export default Home;
+export default connect(mapStateToProps)(Home);
