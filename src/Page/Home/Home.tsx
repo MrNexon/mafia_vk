@@ -46,9 +46,9 @@ class Home extends Component<IRootProps> {
               </HorizontalScroll>
             </NamedGroup>
             <NamedGroup header='Ожидают игры'>
-              <RoomCard />
-              <RoomCard />
-              <RoomCard />
+              {this.props.storeState.Room.RoomList.map((room, index) => {
+                return <RoomCard Room={room} key={index} />;
+              })}
             </NamedGroup>
           </ContentWrapper>
         </Panel>
