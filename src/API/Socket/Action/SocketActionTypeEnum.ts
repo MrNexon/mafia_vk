@@ -1,0 +1,4 @@
+export enum SocketActionTypeEnum {
+  INIT_CLIENT = 'SOCKET_INIT_CLIENT',
+  INIT_PUBLIC_GATEWAY = 'SOCKET_INIT_PUBLIC_GATEWAY',
+}

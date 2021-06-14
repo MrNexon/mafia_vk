@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { AuthActionCreator } from '../../API/Auth/AuthActionCreator';
 import { UserActionCreator } from '../../API/User/UserActionCreator';
 import { RoomActionCreator } from '../../API/Room/RoomActionCreator';
+import { SocketActionCreator } from '../../API/Socket/SocketActionCreator';
 
 interface ILoadingState {
   loadingText: string;
@@ -31,6 +32,7 @@ class Loading extends Component<IRootProps, ILoadingState> {
       await dispatch(AuthActionCreator.app(window.location.search));
       await dispatch(UserActionCreator.get());
       await dispatch(RoomActionCreator.list());
+      await dispatch(SocketActionCreator.init());
 
       this.props.setView('home');
     } catch (e) {

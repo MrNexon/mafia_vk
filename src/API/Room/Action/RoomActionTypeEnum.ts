@@ -1,3 +1,5 @@
 export enum RoomActionTypeEnum {
   LIST = 'ROOM_LIST',
+  SOCKET_UPDATE = 'ROOM_SOCKET_UPDATE',
+  SOCKET_CREATE = 'ROOM_SOCKET_CREATE',
 }

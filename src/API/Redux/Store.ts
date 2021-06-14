@@ -4,12 +4,14 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { UserReducer } from '../User/UserReducer';
 import { RoomReducer } from '../Room/RoomReducer';
+import { SocketReducer } from '../Socket/SocketReducer';
 
 export const rootStore = createStore(
   combineReducers({
     Auth: AuthReducer,
     User: UserReducer,
     Room: RoomReducer,
+    Socket: SocketReducer,
   }),
   composeWithDevTools(applyMiddleware(thunk)),
 );
