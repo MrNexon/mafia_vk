@@ -5,3 +5,33 @@
 .vkuiFormField__border {
   border: none;
 }
+
+.vkuiSliderSwitch__button-focus {
+  box-shadow: none;
+}
+
+
+.vkuiCheckbox--ios {
+  padding: 0 !important;
+}
+
+.vkuiTappable--active-background {
+  background-color: transparent !important;
+}
+
+.vkuiCheckbox__icon--on {
+ color: var(--color-accent) !important;
+}
+
+.vkuiCheckbox__content {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+.vkuiCheckbox__icon {
+  margin-top: 3px !important;
+}
+
+.vkuiButton--lvl-primary {
+  background-color: var(--color-accent) !important;
+}
