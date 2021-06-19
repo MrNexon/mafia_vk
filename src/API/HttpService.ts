@@ -5,7 +5,7 @@ export class HttpService {
   private static getDefaultParams() {
     const { Auth } = rootStore.getState();
     const data = {
-      baseURL: 'http://localhost:3001/',
+      baseURL: 'http://localhost:3001/api',
       headers: {},
     };
 
