@@ -31,7 +31,10 @@ class Home extends Component<IRootProps> {
             <NamedGroup header='Играть'>
               <HorizontalScroll>
                 <ScrollWrapper>
-                  <Card
+                  {storeState.RoomType.RoomTypes.map((roomType) => {
+                    return <Card header={roomType.name} subheader={roomType.description} color='basic-cyan' />;
+                  })}
+                  {/*<Card
                     header='Городская мафия'
                     subheader='Мафия, дон, комиссар и дополнительные роли'
                     color='basic-cyan'
@@ -41,7 +44,7 @@ class Home extends Component<IRootProps> {
                     subheader='Мафия, дон, комиссар и ничего лишнего'
                     color='basic-brown'
                   />
-                  <Card header='Турнирная мафия' subheader='Скоро' color='light-purple' />
+                  <Card header='Турнирная мафия' subheader='Скоро' color='light-purple' />*/}
                 </ScrollWrapper>
               </HorizontalScroll>
             </NamedGroup>

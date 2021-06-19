@@ -7,6 +7,7 @@ import { AuthActionCreator } from '../../API/Auth/AuthActionCreator';
 import { UserActionCreator } from '../../API/User/UserActionCreator';
 import { RoomActionCreator } from '../../API/Room/RoomActionCreator';
 import { SocketActionCreator } from '../../API/Socket/SocketActionCreator';
+import { RoomTypeActionCreator } from '../../API/RoomType/RoomTypeActionCreator';
 
 interface ILoadingState {
   loadingText: string;
@@ -32,6 +33,7 @@ class Loading extends Component<IRootProps, ILoadingState> {
       await dispatch(AuthActionCreator.app(window.location.search));
       await dispatch(SocketActionCreator.auth());
       await dispatch(UserActionCreator.get());
+      await dispatch(RoomTypeActionCreator.list());
       await dispatch(RoomActionCreator.list());
 
       this.props.setView('home');

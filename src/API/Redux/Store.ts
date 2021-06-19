@@ -7,6 +7,7 @@ import { RoomReducer } from '../Room/RoomReducer';
 import { SocketReducer } from '../Socket/SocketReducer';
 import { socketMiddleware } from './SocketMiddleware';
 import { io } from 'socket.io-client';
+import { RoomTypeReducer } from '../RoomType/RoomTypeReducer';
 
 const socket = io(`http://localhost:3001`, {
   path: '/api/gateway',
@@ -18,6 +19,7 @@ export const rootStore = createStore(
     User: UserReducer,
     Room: RoomReducer,
     Socket: SocketReducer,
+    RoomType: RoomTypeReducer,
   }),
   composeWithDevTools(applyMiddleware(thunk, socketMiddleware(socket))),
 );
