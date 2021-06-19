@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HorizontalScroll, Panel, PanelHeader, View } from '@vkontakte/vkui';
+import { HorizontalScroll, ModalRoot, Panel, PanelHeader, View } from '@vkontakte/vkui';
 import { Icon28GameOutline } from '@vkontakte/icons';
 
 import IRootProps from '../IRootProps';
@@ -12,12 +12,20 @@ import RoomCard from '../../Component/RoomCard/RoomCard';
 import ScrollWrapper from '../../Component/ScrollWrapper/ScrollWrapper';
 import { connect } from 'react-redux';
 import { mapStateToProps } from '../../API/Redux/Hooks';
+import CreateRoom from '../CreateRoom/CreateRoom';
 
 class Home extends Component<IRootProps> {
   render() {
     const { id, storeState } = this.props;
     return (
-      <View activePanel='main' id={id}>
+      <View
+        activePanel='main'
+        id={id}
+        modal={
+          <ModalRoot activeModal='root'>
+            <CreateRoom id='root' />
+          </ModalRoot>
+        }>
         <Panel id='main'>
           <PanelHeader separator={false}>Мафия</PanelHeader>
           <ContentWrapper>

@@ -32,7 +32,6 @@ class App extends Component<any, IAppRootState> {
       <Root activeView={this.state.activeView}>
         <Loading id='loading' setView={this.setView} />
         <Home id='home' setView={this.setView} />
-        <CreateRoom id='create-room' setView={this.setView} />
       </Root>
     );
   }
