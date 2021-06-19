@@ -1,0 +1,4 @@
+export enum PublicGatewaySendActionTypeEnum {
+  SUBSCRIBE = 'SOCKET_SEND/PUBLIC_SUBSCRIBE',
+  UNSUBSCRIBE = 'SOCKET_SEND/PUBLIC_UNSUBSCRIBE',
+}

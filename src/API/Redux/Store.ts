@@ -18,8 +18,8 @@ export const rootStore = createStore(
     Auth: AuthReducer,
     User: UserReducer,
     Room: RoomReducer,
-    Socket: SocketReducer,
     RoomType: RoomTypeReducer,
+    Socket: SocketReducer,
   }),
   composeWithDevTools(applyMiddleware(thunk, socketMiddleware(socket))),
 );

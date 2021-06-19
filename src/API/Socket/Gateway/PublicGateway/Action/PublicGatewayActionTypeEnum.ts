@@ -1,0 +1,4 @@
+export enum PublicGatewayActionTypeEnum {
+  ROOM_CREATE = 'SOCKET_EVENT/PUBLIC_ROOM_CREATE',
+  ROOM_UPDATE = 'SOCKET_EVENT/PUBLIC_ROOM_UPDATE',
+}

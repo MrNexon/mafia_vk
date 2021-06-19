@@ -1,5 +1,5 @@
 import { RoomListAction } from './RoomListAction';
-import { RoomUpdateByIdAction } from './RoomUpdateByIdAction';
-import { RoomCreateAction } from './RoomCreateAction';
+import { PublicGatewayRoomCreateAction } from '../../Socket/Gateway/PublicGateway/Action/PublicGatewayRoomCreateAction';
+import { PublicGatewayRoomUpdateAction } from '../../Socket/Gateway/PublicGateway/Action/PublicGatewayRoomUpdateAction';
 
-export type RoomActions = RoomListAction | RoomUpdateByIdAction | RoomCreateAction;
+export type RoomActions = RoomListAction | PublicGatewayRoomCreateAction | PublicGatewayRoomUpdateAction;

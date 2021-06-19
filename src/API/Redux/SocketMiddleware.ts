@@ -17,7 +17,7 @@ export const socketMiddleware = (socket: Socket): Middleware => {
       });
     });
 
-    socket.onAny((event, ...data) => {
+    socket.onAny((event, data) => {
       store.dispatch({
         type: `SOCKET_EVENT/${event}`,
         payload: data,
