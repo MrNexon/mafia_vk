@@ -1,21 +1,20 @@
 import { Dispatch } from 'redux';
-import { SocketActions } from './Action/SocketActions';
-import { SocketActionTypeEnum } from './Action/SocketActionTypeEnum';
-import { SocketClient } from './SocketClient';
-import { PublicGateway } from './Public/PublicGateway';
+import { rootStore } from '../Redux/Store';
+import { SocketSendActions } from './SendAction/SocketSendActions';
+import { SocketSendActionTypeEnum } from './SendAction/SocketSendActionTypeEnum';
 
 export class SocketActionCreator {
-  static init() {
-    return async (dispatch: Dispatch<SocketActions>): Promise<void> => {
-      dispatch({
-        type: SocketActionTypeEnum.INIT_CLIENT,
-        payload: new SocketClient(),
-      });
-
-      dispatch({
-        type: SocketActionTypeEnum.INIT_PUBLIC_GATEWAY,
-        payload: new PublicGateway(),
-      });
+  static auth() {
+    return (dispatch: Dispatch<SocketSendActions>): void => {
+      const { accessToken } = rootStore.getState().Auth;
+      if (accessToken)
+        ///TODO Return value
+        dispatch({
+          type: SocketSendActionTypeEnum.AUTH_LOGIN,
+          payload: {
+            access_token: accessToken,
+          },
+        });
     };
   }
 }

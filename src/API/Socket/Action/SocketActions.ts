@@ -1,4 +1,5 @@
-import { SocketInitClientAction } from './SocketInitClientAction';
-import { SocketInitPublicGatewayAction } from './SocketInitPublicGatewayAction';
+import { SocketStatusConnectAction } from './SocketStatusConnectAction';
+import { SocketStatusDisconnectAction } from './SocketStatusDisconnectAction';
+import { SocketStatusAuthAction } from './SocketStatusAuthAction';
 
-export type SocketActions = SocketInitClientAction | SocketInitPublicGatewayAction;
+export type SocketActions = SocketStatusConnectAction | SocketStatusDisconnectAction | SocketStatusAuthAction;

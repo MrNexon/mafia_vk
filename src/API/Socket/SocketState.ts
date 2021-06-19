@@ -1,7 +1,8 @@
-import { SocketClient } from './SocketClient';
-import { PublicGateway } from './Public/PublicGateway';
+import { Socket } from 'socket.io-client';
+import DisconnectReason = Socket.DisconnectReason;
 
 export interface SocketState {
-  Client: SocketClient;
-  PublicGateway: PublicGateway;
+  connected: boolean;
+  reason?: DisconnectReason;
+  authorized: boolean;
 }

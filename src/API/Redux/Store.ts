@@ -5,6 +5,12 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { UserReducer } from '../User/UserReducer';
 import { RoomReducer } from '../Room/RoomReducer';
 import { SocketReducer } from '../Socket/SocketReducer';
+import { socketMiddleware } from './SocketMiddleware';
+import { io } from 'socket.io-client';
+
+const socket = io(`http://localhost:3001`, {
+  path: '/api/gateway',
+});
 
 export const rootStore = createStore(
   combineReducers({
@@ -13,7 +19,7 @@ export const rootStore = createStore(
     Room: RoomReducer,
     Socket: SocketReducer,
   }),
-  composeWithDevTools(applyMiddleware(thunk)),
+  composeWithDevTools(applyMiddleware(thunk, socketMiddleware(socket))),
 );
 
 export type RootState = ReturnType<typeof rootStore.getState>;

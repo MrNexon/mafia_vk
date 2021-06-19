@@ -1,15 +1,29 @@
 import { SocketState } from './SocketState';
 import { SocketActionTypeEnum } from './Action/SocketActionTypeEnum';
 import { SocketActions } from './Action/SocketActions';
+import { SocketAckActionTypeEnum } from './Action/SocketAckActionTypeEnum';
 
-const initialState: Partial<SocketState> = {};
+const initialState: SocketState = {
+  connected: false,
+  authorized: false,
+};
 
 export const SocketReducer = (state = initialState, action: SocketActions): Partial<SocketState> => {
   switch (action.type) {
-    case SocketActionTypeEnum.INIT_CLIENT:
-      return { ...state, Client: action.payload };
-    case SocketActionTypeEnum.INIT_PUBLIC_GATEWAY:
-      return { ...state, PublicGateway: action.payload };
+    case SocketActionTypeEnum.STATUS_CONNECT:
+      return { ...state, connected: true, reason: undefined, authorized: false };
+    case SocketActionTypeEnum.STATUS_DISCONNECT:
+      return {
+        ...state,
+        connected: false,
+        reason: action.payload,
+        authorized: false,
+      };
+    case SocketAckActionTypeEnum.LOGIN_AUTH:
+      return {
+        ...state,
+        authorized: action.payload.status,
+      };
     default:
       return state;
   }

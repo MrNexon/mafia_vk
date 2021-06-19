@@ -30,9 +30,9 @@ class Loading extends Component<IRootProps, ILoadingState> {
 
     try {
       await dispatch(AuthActionCreator.app(window.location.search));
+      await dispatch(SocketActionCreator.auth());
       await dispatch(UserActionCreator.get());
       await dispatch(RoomActionCreator.list());
-      await dispatch(SocketActionCreator.init());
 
       this.props.setView('home');
     } catch (e) {
