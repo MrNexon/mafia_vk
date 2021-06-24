@@ -1,10 +1,5 @@
 .Title {
-  font-family: SF Pro Display, sans-serif;
-  font-style: normal;
   font-weight: 600;
-  letter-spacing: 0;
-  text-align: left;
-  color: var(--color-black);
 
   &[data-level='1'] {
     font-size: 22px;
