@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { ITitle } from './ITitle';
 
+import './Title.scss';
+
 class Title extends Component<ITitle> {
   render() {
     return (
