@@ -1,13 +1,11 @@
 .ProfileCell {
-  span {
-    font-family: 'SF UI Display', serif;
-  }
+  padding: 0 var(--space-20px) var(--space-28px);
 
   img {
     display: inline-block;
     width: 64px;
     height: 64px;
-    border-radius: 35px;
+    border-radius: 25px;
     object-fit: cover;
   }
 
@@ -19,32 +17,23 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: var(--space-16px);
   }
 
   &-Info {
-    margin-left: 10px;
     display: flex;
     flex-direction: column;
-
-    &-Name {
-      font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 5px;
-    }
-
-    &-Level {
-      font-size: 14px;
-    }
+    gap: var(--space-04px);
   }
 
   &-GoButton {
-    background-color: #e9f6ff;
+    background-color: var(--color-light-blue);
     border-radius: 10px;
     width: 42px;
     height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #48a7ff;
+    color: var(--color-blue);
   }
 }
