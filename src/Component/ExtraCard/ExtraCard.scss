@@ -1,77 +1,76 @@
 .ExtraCard {
-  span {
-    font-family: 'SF UI Display', serif;
-  }
+  padding: 0 var(--space-20px) var(--space-28px);
 
-  position: relative;
-  height: 115px;
-  border-radius: 15px;
+  &-Wrapper {
+    position: relative;
+    box-sizing: border-box;
+    padding: var(--space-16px) var(--space-20px);
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-
-  box-sizing: border-box;
-  padding: 16px 21px;
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: -13px;
-    right: -13px;
-    bottom: -13px;
-    left: -13px;
-
-    background: inherit;
-    border-radius: inherit;
-
-    filter: blur(18px);
-
-    opacity: .3;
-    z-index: -1;
-  }
-
-  &-Icon {
-    position: absolute;
-    width: calc(139px - 30px);
-    right: 0;
-    top: -13px;
-    opacity: .15;
-
-    .vkuiIcon, .vkuiIcon svg {
-      width: 139px !important;
-      height: 139px !important;
-    }
-  }
-
-  &-Info {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    height: 100%;
+    align-items: flex-end;
 
-    &-Text {
+    height: 115px;
+    border-radius: 15px;
+
+    &-Icon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+
+      display: flex;
+      align-items: center;
+
+      width: calc(140px - var(--space-28px));
+
+      opacity: .15;
+
+      .vkuiIcon, .vkuiIcon svg {
+        width: 140px !important;
+        height: 140px !important;
+      }
+    }
+
+    &-Info {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
 
-      &-Header {
-        font-weight: 600;
-        font-size: 18px;
-      }
+      &-Text {
+        display: flex;
+        flex-direction: column;
 
-      &-Subheader {
-        font-size: 13px;
+        color: var(--color-white)
       }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc(var(--space-06px) * -1);
+      right: calc(var(--space-06px) * -1);
+      bottom: calc(var(--space-06px) * -1);
+      left: calc(var(--space-06px) * -1);
+
+      background: inherit;
+      border-radius: inherit;
+
+      filter: var(--blur-soft-shaddow);
+
+      opacity: .3;
+      z-index: -1;
     }
   }
 
-  &[data-type='attention'] {
+  &[data-color='attention'] > &-Wrapper {
     background: var(--gradient-bright-red);
     color: white;
   }
 
-  &[data-type='info'] {
+  &[data-color='info'] > &-Wrapper {
     background: var(--gradient-bright-purple);
     color: white;
   }

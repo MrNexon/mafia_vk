@@ -37,7 +37,12 @@
 }
 
 :root {
+  --blur-soft-shaddow: blur(20px);
+}
+
+:root {
   --space-04px: 4px;
+  --space-06px: 6px;
   --space-08px: 8px;
   --space-12px: 12px;
   --space-14px: 14px;
@@ -49,4 +54,5 @@
 body {
   padding: 0;
   margin: 0;
+  color: var(--color-black)
 }
