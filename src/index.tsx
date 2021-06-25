@@ -4,8 +4,7 @@ import { AppRoot } from '@vkontakte/vkui';
 import bridge from '@vkontakte/vk-bridge';
 import * as dotenv from 'dotenv';
 import App from './App';
-/*import '@vkontakte/vkui/dist/vkui.css';
-import './VKFix.scss';*/
+import '@vkontakte/vkui/dist/vkui.css';
 import './Font/stylesheet.css';
 import './MainStyle.scss';
 import reportWebVitals from './reportWebVitals';
