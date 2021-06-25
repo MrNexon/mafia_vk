@@ -1,67 +1,36 @@
 import React, { Component } from 'react';
-import { HorizontalScroll, ModalRoot, Panel, PanelHeader, View } from '@vkontakte/vkui';
-import { Icon28GameOutline } from '@vkontakte/icons';
-
+import { Panel, PanelHeader, View } from '@vkontakte/vkui';
 import IRootProps from '../IRootProps';
 import ProfileCell from '../../Component/ProfileCell/ProfileCell';
-import ContentWrapper from '../../Component/ContentWrapper/ContentWrapper';
-import ExtraCard from '../../Component/ExtraCard/ExtraCard';
-import NamedGroup from '../../Component/NamedGroup/NamedGroup';
-import Card from '../../Component/Card/Card';
 import RoomCard from '../../Component/RoomCard/RoomCard';
-import ScrollWrapper from '../../Component/ScrollWrapper/ScrollWrapper';
 import { connect } from 'react-redux';
 import { mapStateToProps } from '../../API/Redux/Hooks';
-import CreateRoom from '../CreateRoom/CreateRoom';
+import GroupHeader from '../../Component/Group/Header/GroupHeader';
+import CardScroll from '../../Component/CardScroll/CardScroll';
+import GradientCard from '../../Component/GradientCard/GradientCard';
 
 class Home extends Component<IRootProps> {
+  constructor(props: IRootProps) {
+    super(props);
+  }
+
   render() {
     const { id, storeState } = this.props;
     return (
-      <View
-        activePanel='main'
-        id={id}
-        modal={
-          <ModalRoot activeModal='root'>
-            <CreateRoom id='root' />
-          </ModalRoot>
-        }>
+      <View activePanel='main' id={id}>
         <Panel id='main'>
           <PanelHeader separator={false}>Мафия</PanelHeader>
-          <ContentWrapper>
-            <ProfileCell User={storeState.User} />
-            <ExtraCard
-              header='Твои друзья уже в игре!'
-              subheader='Подключайся к комнате'
-              type='attention'
-              icon={<Icon28GameOutline />}
-            />
-            <NamedGroup header='Играть'>
-              <HorizontalScroll>
-                <ScrollWrapper>
-                  {storeState.RoomType.RoomTypes.map((roomType) => {
-                    return <Card header={roomType.name} subheader={roomType.description} color='basic-cyan' />;
-                  })}
-                  {/*<Card
-                    header='Городская мафия'
-                    subheader='Мафия, дон, комиссар и дополнительные роли'
-                    color='basic-cyan'
-                  />
-                  <Card
-                    header='Классическая мафия'
-                    subheader='Мафия, дон, комиссар и ничего лишнего'
-                    color='basic-brown'
-                  />
-                  <Card header='Турнирная мафия' subheader='Скоро' color='light-purple' />*/}
-                </ScrollWrapper>
-              </HorizontalScroll>
-            </NamedGroup>
-            <NamedGroup header='Ожидают игры'>
-              {this.props.storeState.Room.RoomList.map((room, index) => {
-                return <RoomCard Room={room} key={index} />;
-              })}
-            </NamedGroup>
-          </ContentWrapper>
+          <ProfileCell User={storeState.User} />
+          <GroupHeader>Играть</GroupHeader>
+          <CardScroll>
+            {storeState.RoomType.RoomTypes.map((roomType) => (
+              <GradientCard header={roomType.name} description={roomType.description} />
+            ))}
+          </CardScroll>
+          <GroupHeader>Ожидают игры</GroupHeader>
+          {this.props.storeState.Room.RoomList.map((room) => (
+            <RoomCard Room={room} />
+          ))}
         </Panel>
       </View>
     );
