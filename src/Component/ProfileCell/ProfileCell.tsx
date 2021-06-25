@@ -10,14 +10,9 @@ class ProfileCell extends Component<IProfileCellProps> {
     return (
       <div className='ProfileCell'>
         <div className='ProfileCell-Block'>
-          {/*<img src={this.props.User.avatar_src} />*/}
-          <img
-            src={
-              'https://sun9-61.userapi.com/impg/q2cDzIFVWraU11Sp0f6MxRP1Ug23wFKp-jOYpQ/I30Gpp5kWgE.jpg?size=2560x1707&quality=96&sign=2f43c78a6bcbbaa8163aabf635ee503b&type=album'
-            }
-          />
+          <img src={this.props.User.avatar_src} alt='Profile Avatar' />
           <div className='ProfileCell-Info'>
-            <Title level={'2'}>Ефим Беляков</Title>
+            <Title level={'2'}>{this.props.User.first_name + ' ' + this.props.User.last_name}</Title>
             <Text level={'2'}>Уровень 1</Text>
           </div>
         </div>
