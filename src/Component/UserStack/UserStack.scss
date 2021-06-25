@@ -1,0 +1,43 @@
+.UserStack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-08px);
+
+  &-Wrapper {
+    display: inherit;
+    flex-direction: inherit;
+
+    img {
+      width: 22px;
+      height: 24px;
+      clip-path: url(#user_stack_24);
+      object-fit: cover;
+
+      &:first-child {
+        clip-path: none;
+        width: 24px;
+        border-radius: 12px;
+      }
+    }
+  }
+
+  .Text {
+    opacity: .5;
+  }
+
+  &[data-size='m'] > &-Wrapper > img {
+    width: 30px;
+    height: 32px;
+    clip-path: url(#user_stack_32);
+
+    &:first-child {
+      width: 32px;
+      border-radius: 16px;
+      clip-path: none;
+    }
+  }
+
+}
+
+
