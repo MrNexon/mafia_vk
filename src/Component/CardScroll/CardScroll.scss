@@ -1,0 +1,9 @@
+.CardScroll {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-12px);
+
+  &-Space {
+    padding-right: calc(var(--space-20px) - var(--space-12px));
+  }
+}
