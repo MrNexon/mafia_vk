@@ -22,8 +22,11 @@ export const RoomReducer = (state = initialState, action: RoomActions): RoomStat
         room.id === action.payload.id ? { ...room, ...action.payload } : room,
       );
       return { ...state, RoomList: rooms };
-    case RoomGatewayAckActionTypeEnum.ROOM_CONNECT:
+    case RoomGatewayAckActionTypeEnum.CONNECT:
       return { ...state, Room: { ...action.payload.data.Room, connected: action.payload.status } };
+
+    case RoomGatewayAckActionTypeEnum.DISCONNECT:
+      return { ...state, Room: undefined };
 
     case RoomGatewayActionTypeEnum.UPDATE: ///TODO Гарантия существования объекта комнаты
       if (typeof state.Room === 'undefined') return state;

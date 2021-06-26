@@ -4,6 +4,6 @@ import { StatusResponseDto } from '../../../DTO/StatusResponse.dto';
 import { ConnectRoomStatusResponseDto } from '../DTO/ConnectRoomStatusResponse.dto';
 
 export interface RoomGatewayStatusConnectAckAction extends BaseAction {
-  type: RoomGatewayAckActionTypeEnum.ROOM_CONNECT;
+  type: RoomGatewayAckActionTypeEnum.CONNECT;
   payload: StatusResponseDto<ConnectRoomStatusResponseDto>;
 }

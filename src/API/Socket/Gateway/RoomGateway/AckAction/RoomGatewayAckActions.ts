@@ -1,3 +1,4 @@
 import { RoomGatewayStatusConnectAckAction } from './RoomGatewayStatusConnectAckAction';
+import { RoomGatewayStatusDisconnectAckAction } from './RoomGatewayStatusDisconnectAckAction';
 
-export type RoomGatewayAckActions = RoomGatewayStatusConnectAckAction;
+export type RoomGatewayAckActions = RoomGatewayStatusConnectAckAction | RoomGatewayStatusDisconnectAckAction;

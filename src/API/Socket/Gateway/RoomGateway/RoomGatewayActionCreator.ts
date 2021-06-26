@@ -12,4 +12,12 @@ export class RoomGatewayActionCreator {
       });
     };
   }
+
+  static disconnect() {
+    return (dispatch: Dispatch<RoomGatewaySendActions>): void => {
+      dispatch({
+        type: RoomGatewaySendActionTypeEnum.DISCONNECT,
+      });
+    };
+  }
 }
