@@ -1,4 +1,4 @@
-export interface StatusResponseDto {
+export interface StatusResponseDto<T = undefined> {
   status: boolean;
-  data?: any;
+  data: T;
 }
